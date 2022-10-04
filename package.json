@@ -1,0 +1,12 @@
+{
+  "name": "sass-theme-toggle",
+  "version": "1.0.0",
+  "description": "Theme toggler based on system theme + manual theme toggle (sass,js)",
+  "main": "index.html",
+  "repository": "https://github.com/ashusharmasigdev/sass-theme-toggle.git",
+  "author": "ashusharmasigdev <ashusharma.sigmadev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
