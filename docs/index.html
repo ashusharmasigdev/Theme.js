@@ -1,94 +1,77 @@
-# Theme.js (SASS/CSS, JS)
-
-### All you need to make a theme function in your webapp.
-
-<br>
-
-## Features
-
-- Automatically detects system theme
-- Manual theme toggler
-- Color variables using SASS
-- It can be controlled from css/sass as well as js
-- It exposes Theme API
-
-# Usage
-
-- Copy the ```src/scss``` and ```js``` directory in your project
-
-    - Be sure to edit your colors in ```scss/_vars.scss```
-
-```scss
-
-/*
+<h1 id="theme-js-sass-css-js-">Theme.js (SASS/CSS, JS)</h1>
+<h3 id="all-you-need-to-make-a-theme-function-in-your-webapp-">All you need to make a theme function in your webapp.</h3>
+<p><br></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Automatically detects system theme</li>
+<li>Manual theme toggler</li>
+<li>Color variables using SASS</li>
+<li>It can be controlled from css/sass as well as js</li>
+<li>It exposes Theme API</li>
+</ul>
+<h1 id="usage">Usage</h1>
+<ul>
+<li><p>Copy the <code>src/scss</code> and <code>js</code> directory in your project</p>
+<ul>
+<li>Be sure to edit your colors in <code>scss/_vars.scss</code></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-scss">
+<span class="hljs-comment">/*
     Describe your light-mode colors here
-*/
-$light-background: #e2e2e2;
-$light-color: #303030;
-/** your colors **/
+*/</span>
+<span class="hljs-variable">$light-background</span>: <span class="hljs-number">#e2e2e2</span>;
+<span class="hljs-variable">$light-color</span>: <span class="hljs-number">#303030</span>;
+<span class="hljs-comment">/** your colors **/</span>
 
-/*
+<span class="hljs-comment">/*
     Describe your dark-mode colors here
-*/
-$dark-background: #0f0f0f;
-$dark-color: #ffffff;
-/** your colors **/
-
-
-```
-
-- Link these in your index file
-- Now, initialize theme like below
-
-  - NOTE: It stores theme setting in ```window['theme']```
-
-<br>
-
-## Initialize theme.js with default parameters
-Running following code will make a ```window['them']``` variable that contains this initialized ```Theme``` controller instance.
-```js
-let initTheme = new Theme();
-```
-
-<br>
-
-## Parameters
-```js
-/** default parameters */
-let gTheme = new Theme({
-                        init: true,
-                        defaultTheme: 'system',
-                        initGlobal: true
+*/</span>
+<span class="hljs-variable">$dark-background</span>: <span class="hljs-number">#0f0f0f</span>;
+<span class="hljs-variable">$dark-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-comment">/** your colors **/</span>
+</code></pre>
+<ul>
+<li>Link these in your index file</li>
+<li><p>Now, initialize theme like below</p>
+<ul>
+<li>NOTE: It stores theme setting in <code>window[&#39;theme&#39;]</code></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="initialize-theme-js-with-default-parameters">Initialize theme.js with default parameters</h2>
+<p>Running following code will make a <code>window[&#39;them&#39;]</code> variable that contains this initialized <code>Theme</code> controller instance.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> initTheme = <span class="hljs-function"><span class="hljs-keyword">new</span> <span class="hljs-title">Theme</span>();</span>
+</code></pre>
+<p><br></p>
+<h2 id="parameters">Parameters</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/** default parameters */</span>
+<span class="hljs-keyword">let</span> gTheme = <span class="hljs-keyword">new</span> Theme({
+                        init: <span class="hljs-literal">true</span>,
+                        defaultTheme: <span class="hljs-string">'system'</span>,
+                        initGlobal: <span class="hljs-literal">true</span>
                     });
-```
-- ```init = true``` ensure that it will auto initialize. if it is false, you need to manually initialize it with following code:
-```js
-window['theme'].init()
-/** or **/
-gTheme.init()
-```
-- ```defaultTheme = 'system'``` as you understand, putting ```system``` in it will detect theme from system and set that. Possible values: ```system```, ```light``` or ```dark```.
-- ```initGlobal``` assign the initialized instance to ```window['theme']``` in the case of ```true```.
-
-<br>
-
-## API
-
-```window['theme'].getSystemTheme()``` to get the default system theme.
-
-```window['theme'].getDocumentTheme()``` to get the current selected ```theme``` or if not present it will send system theme.
-
-```window['theme'].setTheme(theme)``` will set the given theme, default value is ```light```.
-
-```window['theme'].init()``` will initialize the Theme instance.
-
-```window['theme'].getTheme()``` returns current selected theme.
-
-```window['theme'].toggleTheme()``` toggle the theme b/w ```light``` and ```dark```.
-
-<br>
-<br>
-
-## LICENCE
-
-MIT
+</code></pre>
+<ul>
+<li><code>init = true</code> ensure that it will auto initialize. if it is false, you need to manually initialize it with following code:<pre><code class="lang-js"><span class="hljs-selector-tag">window</span><span class="hljs-selector-attr">['theme']</span><span class="hljs-selector-class">.init</span>()
+<span class="hljs-comment">/** or **/</span>
+<span class="hljs-selector-tag">gTheme</span><span class="hljs-selector-class">.init</span>()
+</code></pre>
+</li>
+<li><code>defaultTheme = &#39;system&#39;</code> as you understand, putting <code>system</code> in it will detect theme from system and set that. Possible values: <code>system</code>, <code>light</code> or <code>dark</code>.</li>
+<li><code>initGlobal</code> assign the initialized instance to <code>window[&#39;theme&#39;]</code> in the case of <code>true</code>.</li>
+</ul>
+<p><br></p>
+<h2 id="api">API</h2>
+<p><code>window[&#39;theme&#39;].getSystemTheme()</code> to get the default system theme.</p>
+<p><code>window[&#39;theme&#39;].getDocumentTheme()</code> to get the current selected <code>theme</code> or if not present it will send system theme.</p>
+<p><code>window[&#39;theme&#39;].setTheme(theme)</code> will set the given theme, default value is <code>light</code>.</p>
+<p><code>window[&#39;theme&#39;].init()</code> will initialize the Theme instance.</p>
+<p><code>window[&#39;theme&#39;].getTheme()</code> returns current selected theme.</p>
+<p><code>window[&#39;theme&#39;].toggleTheme()</code> toggle the theme b/w <code>light</code> and <code>dark</code>.</p>
+<p><br>
+<br></p>
+<h2 id="licence">LICENCE</h2>
+<p>MIT</p>
