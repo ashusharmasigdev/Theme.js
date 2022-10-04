@@ -93,5 +93,9 @@ html[data-theme=dark] {
     --color: #ffffff;
   }
 }
+body {
+  background: var(--background);
+  color: var(--color);
+}
 
 /*# sourceMappingURL=master.css.map */
