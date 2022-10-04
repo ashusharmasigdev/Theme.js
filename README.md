@@ -18,7 +18,7 @@
 
     - Be sure to edit your colors in ```scss/_vars.scss```
 
-```css
+```scss
 
 /*
     Describe your light-mode colors here
