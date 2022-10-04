@@ -1,0 +1,133 @@
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Extract your (theme/color)-map based on system/html condition
+*/
+/* initialy */
+html, :root {
+  --background: #e2e2e2;
+  --color: #303030;
+}
+
+html[data-theme=light] {
+  --background: #e2e2e2;
+  --color: #303030;
+}
+
+html[data-theme=dark] {
+  --background: #0f0f0f;
+  --color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #e2e2e2;
+    --color: #303030;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0f0f;
+    --color: #ffffff;
+  }
+}
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+body {
+  background: var(--background);
+  color: var(--color);
+}
+
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,31 @@
+@import "vars";
+@import "mixins";
+
+/*
+    Extract your (theme/color)-map based on system/html condition
+*/
+
+/* initialy */
+html, :root {
+    @include extract-map($light-theme-map);
+}
+
+html[data-theme='light'] {
+    @include extract-map($light-theme-map);
+}
+
+html[data-theme='dark'] {
+    @include extract-map($dark-theme-map);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        @include extract-map($light-theme-map);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include extract-map($dark-theme-map);
+    }
+}
