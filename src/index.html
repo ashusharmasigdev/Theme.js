@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" id="document">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sass-theme-toggle</title>
     <link rel="stylesheet" href="./css/master.css">
+    <script src="./js/theme.js"></script>
 </head>
 <body>
     <h1 id="theme_preview"></h1>
@@ -13,49 +14,29 @@
 
     <script>
 
-        function getSystemTheme() {
-            const system_color_scheme = window.matchMedia("(prefers-color-scheme: dark)");
-            if (system_color_scheme.matches) {
-                return "dark";
-            } else {
-                return "light";
-            }
+        function initApp() {
+
+            /* default configuration */
+            let initTheme = new Theme({
+                init: true,
+                defaultTheme: 'system',
+                initGlobal: true
+            });
+
+            printTheme();
         }
 
-        var initial_theme = getSystemTheme();
-        window['theme'] = initial_theme;
-
-        function getTheme() {
-            var rootEl = document.getElementById("document");
+        function printTheme() {
             var text = document.getElementById("theme_preview");
-            let attr = rootEl.getAttribute("data-theme");
-            let theme = getSystemTheme();
-            if(attr)
-            {
-                theme = attr;
-            }
-
-            text.innerText = `applied theme: ${theme}`;
+            text.innerText = `applied theme: ${window['theme'].getTheme()}`;
         }
 
         function toggleTheme() {
-            var rootEl = document.getElementById("document");
-            let attr = rootEl.getAttribute("data-theme");
-            let new_theme = "";
-            if(attr)
-            {
-                new_theme = attr === "dark" ? "light" : "dark";
-            }
-            else
-            {
-                new_theme = initial_theme === "light" ? "dark" : "light";
-            }
-            window['theme'] = new_theme;
-            rootEl.setAttribute("data-theme", new_theme);
-            getTheme();
+            window['theme'].toggleTheme();
+            printTheme();
         }
 
-        getTheme();
+        initApp();
 
     </script>
 </body>
