@@ -13,8 +13,6 @@
 
     <script>
 
-        let initial_theme = "light";
-
         function getSystemTheme() {
             const system_color_scheme = window.matchMedia("(prefers-color-scheme: dark)");
             if (system_color_scheme.matches) {
@@ -23,6 +21,9 @@
                 return "light";
             }
         }
+
+        var initial_theme = getSystemTheme();
+        window['theme'] = initial_theme;
 
         function getTheme() {
             var rootEl = document.getElementById("document");
@@ -49,6 +50,7 @@
             {
                 new_theme = initial_theme === "light" ? "dark" : "light";
             }
+            window['theme'] = new_theme;
             rootEl.setAttribute("data-theme", new_theme);
             getTheme();
         }
