@@ -5,3 +5,7 @@
         #{$name}: $value;
     }
 }
+
+@function css-var($name) {
+    @return var($name);
+}

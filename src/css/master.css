@@ -93,6 +93,38 @@ html[data-theme=dark] {
     --color: #ffffff;
   }
 }
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
+/*
+    Describe your light-mode colors here
+*/
+/*
+    Describe your dark-mode colors here
+*/
+/*
+    You may add other-mode colors here, but note that it will be supported by only manual change
+    ......
+*/
+/*
+    Describe variable name (for css)
+*/
+/*
+    You may heard about sass:map, we are creating theme key maps here
+*/
 body {
   background: var(--background);
   color: var(--color);

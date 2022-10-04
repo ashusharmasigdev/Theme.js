@@ -1,4 +1,7 @@
+@import "vars";
+@import "mixins";
+
 body {
-    background: var(--background);
-    color: var(--color);
+    background: css-var($background);
+    color: css-var($color);
 }

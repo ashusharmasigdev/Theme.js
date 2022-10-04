@@ -19,19 +19,19 @@ $dark-color: #ffffff;
 /*
     Describe variable name (for css)
 */
-$--background: --background;
-$--color: --color;
+$background: --background;
+$color: --color;
 
 /*
     You may heard about sass:map, we are creating theme key maps here
 */
 
 $light-theme-map: (
-    $--background: $light-background,
-    $--color: $light-color,
+    $background: $light-background,
+    $color: $light-color,
 );
 
 $dark-theme-map: (
-    $--background: $dark-background,
-    $--color: $dark-color,
+    $background: $dark-background,
+    $color: $dark-color,
 );
